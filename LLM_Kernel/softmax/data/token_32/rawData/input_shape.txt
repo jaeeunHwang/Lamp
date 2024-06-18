@@ -1,0 +1,2 @@
+EB: Print out softmax input shape
+torch.Size([1, 32, 1, 32])
