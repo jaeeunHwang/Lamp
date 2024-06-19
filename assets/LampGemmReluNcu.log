@@ -1,0 +1,20 @@
+==PROF== Connected to process 86516 (/home/jaeeun/Lamp/gemm_relu/gemm_relu)
+==PROF== Profiling "gemm": 0%....50%....100% - 8 passes
+==PROF== Disconnected from process 86516
+[86516] gemm_relu@127.0.0.1
+  void gemm<(int)128, (int)128, (int)16, (int)64, (int)64, (int)4, (int)8, (int)4, (int)128>(int, int, int, __half, __half *, __half *, __half, __half *) (32, 32, 1)x(128, 1, 1), Context 1, Stream 7, Device 0, CC 8.6
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ------------- ------------
+    Metric Name               Metric Unit Metric Value
+    ----------------------- ------------- ------------
+    DRAM Frequency          cycle/nsecond         9.49
+    SM Frequency            cycle/nsecond         1.39
+    Elapsed Cycles                  cycle   22,758,620
+    Memory Throughput                   %        36.59
+    DRAM Throughput                     %         8.66
+    Duration                      msecond        16.32
+    L1/TEX Cache Throughput             %        38.04
+    L2 Cache Throughput                 %        16.91
+    SM Active Cycles                cycle   21,891,656
+    Compute (SM) Throughput             %        84.21
+    ----------------------- ------------- ------------

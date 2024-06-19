@@ -1,0 +1,125 @@
+==PROF== Connected to process 4615 (/home/jaeeun/anaconda3/envs/JEenv/bin/python3.8)
+> initializing model parallel with size 1
+> initializing ddp with size 1
+> initializing pipeline with size 1
+Loading
+Loaded in 8.12 seconds
+==PROF== Profiling "ampere_fp16_s16816gemm_fp16_64x64_sliced1x2_ldg8_f2f_stages_64x6_tn": 0%
+==WARNING== Backing up device memory in system memory. Kernel replay might be slow. Consider using "--replay-mode application" to avoid memory save-and-restore.
+....50%....100% - 8 passes
+I believe the meaning of life is to find happiness and be satisfied with what you have.
+People have different definitions of happiness. Some people feel that if they could only win the lottery, they would be happy. Some people feel that if they could only get that promotion, they would be happy. Some people feel that if they could only be the top scorer in a game, they would be happy.
+If you do not know what happiness is, I suggest you ask a psychologist. A psychologist has studied the subject of happiness and he or she knows what happiness is. A psychologist has a Ph.D. in psychology and is an expert on the subject of happiness. A psychologist knows how to make people happy.
+Although you might know what happiness is, you might have forgotten it. If that is the case, I suggest you consult a psychologist. A psychologist can make you happy again. A psychologist can help you discover your happiness and how to be happy.
+Happiness is a big word. Happiness is a nice word. Happiness is a beautiful word.
+I believe that the meaning of life is to find happiness and be satisfied with what you have.
+People have different definitions of happiness. Some people feel
+
+==================================
+
+Tweet: "I hate it when my phone battery dies."
+Sentiment: Negative
+###
+Tweet: "My day has been ?мя"
+Sentiment: Positive
+###
+Tweet: "This is the link to the article"
+Sentiment: Neutral
+###
+Tweet: "This new music video was incredibile"
+Sentiment: Positive
+###
+Tweet: "I hate working out"
+Sentiment: Negative
+###
+Tweet: "I hate work outs"
+Sentiment: Negative
+###
+Tweet: "I'm really excited"
+Sentiment: Positive
+###
+Tweet: "I hate my job"
+Sentiment: Negative
+###
+Tweet: "I love this song"
+Sentiment: Positive
+###
+Tweet: "I love this song"
+Sentiment: Positive
+###
+Tweet: "I love this song"
+Sentiment: Positive
+###
+Tweet: "I hate this song"
+Sentiment: Negative
+###
+Tweet: "I love this song"
+Sentiment: Positive
+###
+Tweet: "I hate this song"
+Sentiment: Negative
+###
+Tweet: "I love this song"
+Sentiment: Positive
+###
+Tweet: "I hate this song"
+Sentiment: Negative
+###
+Tweet: "I love this song
+
+==================================
+
+Translate English to French:
+
+sea otter => loutre de mer
+
+peppermint => menthe poivree
+
+plush girafe => girafe peluche
+
+cheese => fromage
+
+Zelda => Zelda
+
+A nice online tool to translate text from English to French is provided by Google.
+
+## Examples
+
+The above examples all translate to the same French sentence:
+
+```
+Le loup est venu dans la foret.
+```
+
+To see the translation in French and to translate text from French to English, go to the Google Translation page.
+
+## See also
+
+* Translation
+* Google Translate
+
+## External links
+
+* http://translate.google.com
+
+==================================
+
+==PROF== Disconnected from process 4615
+[4615] python3.8@127.0.0.1
+  ampere_sgemm_128x128_nn (32, 32, 3)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 8.6
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ------------- -------------
+    Metric Name               Metric Unit  Metric Value
+    ----------------------- ------------- -------------
+    DRAM Frequency          cycle/nsecond          9.49
+    SM Frequency            cycle/nsecond          1.39
+    Elapsed Cycles                  cycle    10,336,940
+    Memory Throughput                   %         49.24
+    DRAM Throughput                     %         20.03
+    Duration                      msecond          7.41
+    L1/TEX Cache Throughput             %         49.95
+    L2 Cache Throughput                 %         32.47
+    SM Active Cycles                cycle 10,188,198.71
+    Compute (SM) Throughput             %         72.96
+    ----------------------- ------------- -------------
+
