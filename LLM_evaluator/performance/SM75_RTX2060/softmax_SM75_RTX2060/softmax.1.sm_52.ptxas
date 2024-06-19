@@ -1,0 +1,5 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z13softmaxKernelPf' for 'sm_52'
+ptxas info    : Function properties for _Z13softmaxKernelPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 15 registers, 256 bytes smem, 328 bytes cmem[0], 8 bytes cmem[2]

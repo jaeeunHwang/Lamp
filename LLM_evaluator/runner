@@ -1,0 +1,76 @@
+#!/bin/bash
+
+function waitFunction()
+{
+    local wait_my_arg
+    if [[ -z $1 ]] ; then
+                wait_my_arg=2
+        else
+                wait_my_arg=$1
+        fi
+
+        while [[ $(jobs -p | wc -l) -ge $wait_my_arg ]] ; do
+                sleep 1;
+        done
+}
+
+
+function readLine()
+{
+    local path=$1
+    while read -r line
+    do
+        COMMAND=$line
+    done < $path
+
+}
+
+
+# Benchmark locations
+BENCHMARKPATH="/root/Lamp_demo/"
+# Benchmark names
+BENCH="gemm_relu"
+# GPGPU-Sim configurations folder
+CONFIGUREPATH="/root/Lamp_demo/GPGPU-Sim/configs/tested-cfgs/"
+# Configuretion folder names
+CONFIGURE="SM75_RTX2060"
+
+# Setup Source Command
+GPGPU="source /root/Lamp_demo/GPGPU-Sim/setup_environment"
+
+# Number of core to run applications
+NUMCPU=16
+
+# Command file name(need to create)
+STARTFILE="runBench.sh"
+
+RESULT="result.txt"
+
+: > $RESULT
+
+$GPGPU
+#for config in $CONFIGURE
+for benchmark in $BENCH
+do
+    #for benchmark in $BENCH
+    for config in $CONFIGURE
+    do
+        sleep 1
+        folderName=$benchmark"_"$config
+        benchpath=$BENCHMARKPATH$benchmark"/*"
+        configpath=$CONFIGUREPATH$config"/*"
+        rm -rf $folderName
+        mkdir $folderName
+        cd $folderName
+            cp -r $benchpath ./
+        cp -r $configpath ./
+        readLine $STARTFILE
+        $COMMAND 1>output.log 2>error.log &
+        cd ..
+        echo "Issue $folderName"
+        echo $folderName >> $RESULT
+        waitFunction $NUMCPU
+    done
+done
+wait
+
