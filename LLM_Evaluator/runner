@@ -27,16 +27,18 @@ function readLine()
 
 
 # Benchmark locations
-BENCHMARKPATH="/root/Lamp_demo/"
+BENCHMARKPATH="/root/Lamp/LLM_Kernel/"
 # Benchmark names
-BENCH="gemm_relu"
+BENCH="gemm gemm_relu softmax"
 # GPGPU-Sim configurations folder
-CONFIGUREPATH="/root/Lamp_demo/GPGPU-Sim/configs/tested-cfgs/"
+CONFIGUREPATH="/root/Lamp/GPGPU-Sim/configs/tested-cfgs/"
 # Configuretion folder names
-CONFIGURE="SM75_RTX2060"
+CONFIGURE="SM7_QV100"
+# Performance folder names for specific configuration
+PERFORMANCEPATH="/root/Lamp/LLM_Evaluator/performance/"$CONFIGURE
 
 # Setup Source Command
-GPGPU="source /root/Lamp_demo/GPGPU-Sim/setup_environment"
+GPGPU="source /root/Lamp/GPGPU-Sim/setup_environment"
 
 # Number of core to run applications
 NUMCPU=16
@@ -50,10 +52,13 @@ RESULT="result.txt"
 
 $GPGPU
 #for config in $CONFIGURE
-for benchmark in $BENCH
+for config in $CONFIGURE
 do
+    rm -rf $PERFORMANCEPATH
+    mkdir $PERFORMANCEPATH
+    cd $PERFORMANCEPATH
     #for benchmark in $BENCH
-    for config in $CONFIGURE
+    for benchmark in $BENCH
     do
         sleep 1
         folderName=$benchmark"_"$config
