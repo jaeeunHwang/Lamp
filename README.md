@@ -70,8 +70,8 @@ $ ./runner
 View the simulated output in the `output.log` file located in each kernel's directory.
 
 ```bash
-$ cd kernel_performance
-$ vi SM75_RTX2060/gemm/output.log # Example
+$ cd /LLM_Evaluator/performance
+$ vi SM75_RTX2060/gemm_SM75_RTX2060/output.log # Example
 ```
 
 ---
@@ -91,11 +91,7 @@ $ ./summarizer
 
 ### 2. Check the total LLM performance.
 
-View the total LLM performance in the log file.
-
-```bash
-$ vi llm_total_performance_SM75_RTX2060 # Example
-```
+See the total LLM performance printed in the console.
 
 <a id="evaluation"></a>
 ## Evaluation
