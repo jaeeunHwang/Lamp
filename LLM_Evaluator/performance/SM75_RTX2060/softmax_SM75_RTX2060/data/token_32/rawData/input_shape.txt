@@ -1,2 +1,3 @@
-EB: Print out softmax input shape
-torch.Size([1, 32, 1, 32])
+version https://git-lfs.github.com/spec/v1
+oid sha256:4574aaf231ccc9fe02b35276585f40979c5a4634f0ec648041119479dea7f9a3
+size 60
