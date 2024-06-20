@@ -33,7 +33,7 @@ Check your CUDA installation path and set the PATH variable with the CUDA_INSTAL
 
 ```bash
 $ export CUDA_INSTALL_PATH=<YOUR-CUDA-PATH>
-$ export PATH=$CUDA_INSTALL_PATH/bin:$PATH
+$ export PATH=$PATH:$CUDA_INSTALL_PATH/bin
 ```
 
 ### 3. Build the simulator.
