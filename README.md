@@ -97,11 +97,11 @@ See the total LLM performance printed in the console.
 ## Evaluation
 We implemented Lamp using optimization techniques to increase similarity with the existing LLM Kernel.
 Consequently, Our Lamp's LLM Kernels that we implemented show more than 80% similarity to existing LLM Kernels. The evaluation results can be checked in the `/evaluation/*Ncu.log`, and the normalized results are displayed graphically as follows.
-<p align="center"><img src="evaluation/executionTime.JPG" height="256px"/></p>
+<p align="center"><img src="evaluation/executionTime.jpg" height="256px"/></p>
 The picture above is the result of normalizing the execution time of each kernel of Lamp and LLaMA.
-<p align="center"><img src="evaluation/memoryThroughput.JPG" height="256px"/></p>
+<p align="center"><img src="evaluation/memoryThroughput.jpg" height="256px"/></p>
 The picture above is the result of normalizing the memory throughput of each kernel of Lamp and LLaMA.
-<p align="center"><img src="evaluation/computeThroughput.JPG" height="256px"/></p>
+<p align="center"><img src="evaluation/computeThroughput.jpg" height="256px"/></p>
 The picture above is the result of normalizing the compute throughput of each kernel of Lamp and LLaMA.
 
 ---
