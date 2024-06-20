@@ -11,7 +11,7 @@
 
 Welcome to the Optimus GPrime Capstone Design Project! This GitHub repository contains the code and instructions for setting up and running simulations with Lamp.
 
-Lamp is an LLM hardware performance evaluator that includes LLM kernels and an evaluator for launching GPU simulations. For detailed information, refer to the instructions below.
+Lamp is an LLM hardware performance estimator that includes LLM kernels and an evaluator for launching GPU simulations. For detailed information, refer to the instructions below.
 
 ## Clone and Build GPGPU-Sim
 
@@ -96,3 +96,28 @@ View the total LLM performance in the log file.
 ```bash
 $ vi llm_total_performance_SM75_RTX2060 # Example
 ```
+
+<a id="evaluation"></a>
+## Evaluation
+We implemented Lamp using optimization techniques to increase similarity with the existing LLM Kernel.
+Consequently, Our Lamp's LLM Kernels that we implemented show more than 80% similarity to existing LLM Kernels. The evaluation results can be checked in the `/evaluation/*Ncu.log`, and the normalized results are displayed graphically as follows.
+<p align="center"><img src="evaluation/executionTime.JPG" height="256px"/></p>
+The picture above is the result of normalizing the execution time of each kernel of Lamp and LLaMA.
+<p align="center"><img src="evaluation/memoryThroughput.JPG" height="256px"/></p>
+The picture above is the result of normalizing the memory throughput of each kernel of Lamp and LLaMA.
+<p align="center"><img src="evaluation/computeThroughput.JPG" height="256px"/></p>
+The picture above is the result of normalizing the compute throughput of each kernel of Lamp and LLaMA.
+
+---
+
+
+<a id="acknowledgement"></a>
+## 👏 Acknowledgement
+This project is enabled by the great projects below.
+- [LLaMA](https://github.com/meta-llama/llama)
+  
+(Below are reference materials for the kernel implementation.)
+- [PyTorch](https://github.com/pytorch/pytorch.git) 
+- [FasterTransformer](https://github.com/NVIDIA/FasterTransformer.git)
+- [CUTLASS](https://github.com/NVIDIA/cutlass.git)
+- [SGEMM_CUDA](https://github.com/siboehm/SGEMM_CUDA)
